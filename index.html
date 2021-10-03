@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixabay search engine</title>
+    <script src="se.js" defer></script>
+    <link rel="stylesheet" href="se.css">
+    <meta name="description" content="A simple search engine that finds the images you are looking for with help from Pixabay">
+</head>
+<body>
+    <div id="myPopup" class="popup">
+        <span class="close">&times;</span>
+        <img class="popup-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <header id="headerBg">
+        <h1><span>&nbspPixabay Search Engine&nbsp</span></h1>
+        <form method="GET" action="https://pixabay.com/api/" id="searchform">
+            <input id="searchbox" name="text" type="search" placeholder="What are you looking for?">
+            <select name="colors">
+                <option value="">Any color</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+                <option value="turquoise">Turquoise</option>
+                <option value="lilac">Purple</option>
+                <option value="pink">Pink</option>
+                <option value="white">White</option>
+                <option value="gray">Gray</option>
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="transparent">Transparent</option>
+            </select>
+            <select name="orientation">
+                <option value="all">Orientation</option>
+                <option value="horizontal">Landscape</option>
+                <option value="vertical">Portrait</option>
+            </select>
+            <button id="search">Search pixabay</button>
+            <div id="pagebuttons">
+                <button id="previous">Previous page</button>
+                <button id="next">Next page</button>
+            </div>
+        </form>
+    </header>
+    <main id='container'>
+
+    </main>
+    <footer>
+        <div>
+            <h3>
+                Approved by Bruce
+            </h3>
+            <p>
+                Jonas Moss &amp; Niclas Andrén
+            </p>
+        </div>
+        <img src="images/pixabay.png" alt="Pixabay logotype" width="100px">
+    </footer>
+</body>
+</html>
