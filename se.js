@@ -2,6 +2,8 @@
 let pageNr = 1;
 const perPage = 10;
 let totalPages = 0;
+let colorMem = '';
+let keywordsMem = '';
 
 //Generate search for random header image
 const body = document.querySelector('body');
@@ -44,6 +46,8 @@ form.onsubmit = async event => {
     });
     const url = form.action + '?' + params;
 
+    colorMem = color;
+    keywordsMem = keywords;
     // Clear previous content
     const main = document.querySelector('main');
     while(main.firstChild){
@@ -135,10 +139,14 @@ document.getElementById('search').onclick = function() {
 
 document.getElementById('previous').onclick = function() {
     pageNr -= 1;
+    document.getElementById('searchbox').value = keywordsMem;
+    document.getElementById('colorbox').value = colorMem;
 };
 
 document.getElementById('next').onclick = function() {
     pageNr += 1;
+    document.getElementById('searchbox').value = keywordsMem;
+    document.getElementById('colorbox').value = colorMem;
 };
 
 // Randomizer function
