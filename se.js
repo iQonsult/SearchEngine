@@ -170,6 +170,7 @@ function randomImage(obj) {
 
 // Tag button search function
 function searchTag() {
+    pageNr = 1;
     document.getElementById('colorbox').value = '';
     document.getElementById('orientationbox').value = 'all';
     document.getElementById('searchbox').value = event.target.value;
